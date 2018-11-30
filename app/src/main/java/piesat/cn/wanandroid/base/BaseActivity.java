@@ -28,7 +28,7 @@ public abstract class BaseActivity extends AppCompatActivity implements NetWorkB
     private Unbinder bind;
     public static NetWorkBroadcastReceiver.NetEvent netEvent;
     public AppDavikActivityUtil appDavikActivityUtil = AppDavikActivityUtil.getScreenManager();
-    private MyApplication context;
+    protected MyApplication context;
     protected BaseActivity activity;
 
     @Override
@@ -64,8 +64,17 @@ public abstract class BaseActivity extends AppCompatActivity implements NetWorkB
             }
         }
     }
+    /**
+     * 获取 布局信息
+     */
     protected abstract int getLayout();
+    /**
+     * 初始化 ui 布局
+     */
     protected abstract void initView();
+    /**
+     * 数据初始化
+     */
     protected abstract void initData();
 
 
