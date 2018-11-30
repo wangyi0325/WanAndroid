@@ -47,6 +47,7 @@ public abstract class BaseFragment extends Fragment implements NetWorkBroadcastR
     @Override
     public void onNetChange(int netMobile) {
       this.netMobile = netMobile;
+
         isNetConnect();
     }
 
