@@ -2,6 +2,7 @@ package piesat.cn.wanandroid.ui.login;
 
 import piesat.cn.wanandroid.base.baseMvp.BasePre;
 import piesat.cn.wanandroid.base.baseMvp.BaseView;
+import piesat.cn.wanandroid.data.bean.UserInfo;
 
 /**
  * 作者：wangyi
@@ -11,7 +12,7 @@ import piesat.cn.wanandroid.base.baseMvp.BaseView;
 public class LoginContract {
 
     public interface LoginView extends BaseView{
-        void loginOk(String responseData);
+        void loginOk(UserInfo userInfo);
         void loginErr(String errData);
     }
 

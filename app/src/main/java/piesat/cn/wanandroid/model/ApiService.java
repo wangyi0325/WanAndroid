@@ -1,19 +1,18 @@
 package piesat.cn.wanandroid.model;
+import io.reactivex.Observable;
+import piesat.cn.wanandroid.data.BaseResp;
+import piesat.cn.wanandroid.data.bean.UserInfo;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
-import retrofit2.http.GET;
 import retrofit2.http.POST;
-import retrofit2.http.Path;
-import retrofit2.http.Query;
 
 /**
  * retrofit api 接口类
  *
- * @packageName: cn.white.ymc.wanandroidmaster.model.api
+ * @packageName: piesat.cn.wanandroid.model
  * @fileName: ApiServer
  * @date: 2018/7/24  10:45
- * @author: ymc
- * @QQ:745612618
+ * @author: wangyi
  */
 
 public interface ApiService {
@@ -23,21 +22,22 @@ public interface ApiService {
     @GET("article/list/{page}/json")
     Observable<BaseResp<HomePageArticleBean>> getArticleList(@Path("page") int num);
 
-    *//**
+    */
+    /**
      * 登录
-     *//*
+     */
     @POST("user/login")
     @FormUrlEncoded
     Observable<BaseResp<UserInfo>> login(@Field("username") String username, @Field("password") String password);
 
-    *//**
+    /**
      * 注册
-     *//*
+     */
     @POST("user/register")
     @FormUrlEncoded
     Observable<BaseResp<UserInfo>> register(@Field("username") String username, @Field("password") String password, @Field("repassword") String repassword);
 
-    *//**
+    /**
      * banner
      *//*
     @GET("banner/json")

@@ -30,11 +30,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 /**
  * api retrofit 工具类
  *
- * @packageName: cn.white.ymc.wanandroidmaster.model
+ * @packageName: piesat.cn.wanandroid.model
  * @fileName: ApiStore
  * @date: 2018/7/23  16:30
- * @author: ymc
- * @QQ:745612618
+ * @author: wangyi
  */
 
 public class ApiStore {
